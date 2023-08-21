@@ -1,0 +1,7 @@
+StudentManagement.Domain/obj/
+StudentManagement/.vs/
+StudentManagement/bin/
+StudentManagement/obj/
+StudentManagement.Application/obj/
+StudentManagement.Application/bin/
+StudentManagement.Domain/bin/
