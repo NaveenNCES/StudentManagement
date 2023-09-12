@@ -9,7 +9,7 @@ namespace StudentManagement.Domain.Repository
     {
         private readonly StudentDatabaseContext _studentDatabaseContext;
 
-        public StudentRepository(StudentDatabaseContext studentDatabaseContext) 
+        public StudentRepository(StudentDatabaseContext studentDatabaseContext)
         {
             _studentDatabaseContext = studentDatabaseContext;
         }
@@ -17,6 +17,34 @@ namespace StudentManagement.Domain.Repository
         public async Task<IReadOnlyList<StudentDetail>> GetStudentDetailsAsync()
         {
             return await _studentDatabaseContext.StudentDetails.ToListAsync();
+        }
+
+        public async Task SetStudentDetailsAsync(StudentDetail studentDetail)
+        {
+            await _studentDatabaseContext.AddAsync(studentDetail);
+            await _studentDatabaseContext.SaveChangesAsync();
+        }
+
+        public async Task<bool> DeleteStudentDetailAsync(int id)
+        {
+
+            var selectedStudent = await _studentDatabaseContext.StudentDetails.FirstOrDefaultAsync(x => x.Id == id);
+
+            if (selectedStudent == null)
+            {
+                return false;
+            }
+
+            _studentDatabaseContext.StudentDetails.Remove(selectedStudent);
+            await _studentDatabaseContext.SaveChangesAsync();
+
+            return true;
+        }
+
+        public async Task<StudentDetail?> GetSelectedStudentDetailAsync(StudentDetail studentDetail)
+        {
+            var selectedStudent = await _studentDatabaseContext.StudentDetails.FirstOrDefaultAsync(x => x.RollNumber == studentDetail.RollNumber && x.DateOfBirth == studentDetail.DateOfBirth);
+            return selectedStudent == null ? null : selectedStudent;
         }
     }
 }

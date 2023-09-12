@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudentManagement.Domain", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudentManagement.Test", "..\StudentManagement.Test\StudentManagement.Test.csproj", "{9FA87E0F-1AF1-4ACB-9E29-E5BAFDA397D5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentManagement.IntegrationTest", "..\StudentManagement.IntegrationTest\StudentManagement.IntegrationTest.csproj", "{E201D5F9-F1E5-4471-B598-EEE078CA9D20}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{9FA87E0F-1AF1-4ACB-9E29-E5BAFDA397D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9FA87E0F-1AF1-4ACB-9E29-E5BAFDA397D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9FA87E0F-1AF1-4ACB-9E29-E5BAFDA397D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E201D5F9-F1E5-4471-B598-EEE078CA9D20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E201D5F9-F1E5-4471-B598-EEE078CA9D20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E201D5F9-F1E5-4471-B598-EEE078CA9D20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E201D5F9-F1E5-4471-B598-EEE078CA9D20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
